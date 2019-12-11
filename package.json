@@ -18,7 +18,7 @@
     "homepage": "https://github.com/Dreamacro/clash-dashboard",
     "scripts": {
         "build": "npm run clean-dist && webpack --config=configs/webpack/prod.js",
-        "clean-dist": "npx trash ./dist",
+        "clean-dist": "npx rimraf ./dist",
         "lint": "npm run lint:ts && npm run lint:sass",
         "lint:ts": "tslint './src/**/*.ts*' --format stylish",
         "lint:sass": "stylelint ./src/**/*.scss",
@@ -61,7 +61,6 @@
         "stylelint-config-standard": "^19.0.0",
         "stylelint-webpack-plugin": "^1.1.1",
         "terser-webpack-plugin": "^2.2.1",
-        "trash-cli": "^3.0.0",
         "tslint": "^5.20.1",
         "tslint-config-standard": "^9.0.0",
         "tslint-loader": "^3.6.0",
@@ -75,6 +74,7 @@
     },
     "dependencies": {
         "axios": "^0.19.0",
+        "build": "^0.1.4",
         "classnames": "^2.2.6",
         "dayjs": "^1.8.17",
         "eventemitter3": "^4.0.0",
@@ -86,6 +86,7 @@
         "react-table": "^7.0.0-beta.12",
         "react-virtualized-auto-sizer": "^1.0.2",
         "react-window": "^1.8.5",
+        "rimraf": "^3.0.0",
         "semver": "^6.3.0",
         "timeago.js": "^4.0.1",
         "unstated-next": "^1.1.0",
